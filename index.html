@@ -5,18 +5,22 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Landing Page de Alta Conversão — Produto Digital</title>
+
+  <!-- Ícone da aba -->
   <link rel="icon" href="assets/images/favicon.png" type="image/x-icon" />
+
+  <!-- Descrição para SEO -->
   <meta name="description"
     content="Landing page moderna e responsiva feita com Tailwind. Perfeita para cursos, e-books e produtos digitais. Estrutura profissional com SEO, animações e foco em conversão." />
 
-  <!-- Cor da barra de endereço / UI -->
+  <!-- Ajustes de cor para navegadores e mobile -->
   <meta name="color-scheme" content="dark light" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="msapplication-navbutton-color" content="#0b0f1a" />
   <meta name="msapplication-TileColor" content="#0b0f1a" />
 
-  <!-- Open Graph / Twitter -->
+  <!-- Open Graph / Compartilhamento em redes sociais -->
   <meta property="og:title" content="Landing Page de Alta Conversão — Produto Digital" />
   <meta property="og:description"
     content="Estrutura profissional para vender seu curso ou e-book com foco em conversão." />
@@ -24,31 +28,34 @@
   <meta property="og:image" content="/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Fonte otimizada -->
+  <!-- Fontes otimizadas (Inter) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
     as="style">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Tailwind Play CDN -->
+  <!-- Tailwind (via CDN para protótipo rápido) -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
+    /* Configuração personalizada do Tailwind */
     tailwind.config = {
       theme: {
         container: { center: true, padding: '1rem' },
         extend: {
           colors: {
-            bg: '#0b0f1a',
-            surface: '#11182a',
-            text: '#e6e8f0',
-            muted: '#9aa4b2',
-            brand: '#6d5efc',
-            brand2: '#00e5a8'
+            bg: '#0b0f1a',       /* Cor de fundo principal */
+            surface: '#11182a',  /* Cor de superfície (cards, menus) */
+            text: '#e6e8f0',     /* Texto principal */
+            muted: '#9aa4b2',    /* Texto secundário */
+            brand: '#6d5efc',    /* Cor da marca (roxo) */
+            brand2: '#00e5a8'    /* Cor secundária (verde água) */
           },
-          boxShadow: { soft: '0 10px 30px rgba(0,0,0,.25)' },
+          boxShadow: {
+            soft: '0 10px 30px rgba(0,0,0,.25)' /* Sombra suave */
+          },
           fontFamily: {
-            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol']
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial']
           },
           borderRadius: { '2xl': '1.25rem' },
           maxWidth: { max: '1200px' }
@@ -57,13 +64,13 @@
     }
   </script>
 
-  <!-- CSS personalizado -->
+  <!-- Estilos customizados extras -->
   <link rel="stylesheet" href="css/style.css">
 
-  <!-- Biblioteca de animações AOS -->
+  <!-- Biblioteca de animações (AOS) -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-  <!-- Schema.org -->
+  <!-- SEO extra com Schema.org (Produto) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -77,13 +84,17 @@
 </head>
 
 <body class="bg-bg text-text font-sans antialiased selection:bg-brand/30">
-  <a href="#conteudo-pagina"
-    class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:px-4 focus:py-2 focus:rounded-xl focus:bg-white/10 focus:text-white">Pular
-    para conteúdo</a>
 
+  <!-- Acessibilidade: botão para pular direto ao conteúdo -->
+  <a href="#conteudo-pagina"
+    class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:px-4 focus:py-2 focus:rounded-xl focus:bg-white/10 focus:text-white">
+    Pular para conteúdo
+  </a>
+
+  <!-- Barra de progresso de scroll (animada via JS em main.js) -->
   <div id="progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-brand to-brand2 z-50"></div>
 
-  <!-- Fundo decorativo -->
+  <!-- Fundo decorativo com gradientes circulares -->
   <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10">
     <div
       class="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-[radial-gradient(circle_at_center,_rgba(109,94,252,0.35),_transparent_60%)] blur-2xl">
@@ -93,7 +104,7 @@
     </div>
   </div>
 
-  <!-- Header -->
+  <!-- HEADER -->
   <header class="sticky top-0 z-50 border-b border-white/10 glass shadow-md">
     <div class="container max-w-max flex h-16 items-center justify-between">
 
@@ -112,12 +123,15 @@
         <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
       </nav>
 
-      <!-- Ações -->
+      <!-- Ações do header -->
       <div class="flex items-center gap-3">
+        <!-- Botão de compra (desktop) -->
         <a href="#preco"
           class="hidden rounded-full border border-white/15 px-4 py-2 text-sm font-semibold text-white/90 hover:text-white md:inline-block transition-colors">
           Comprar
         </a>
+
+        <!-- Botão burger (mobile) -->
         <button id="burger" aria-controls="menu" aria-expanded="false"
           class="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 md:hidden hover:bg-white/5 transition">
           <span class="sr-only">Abrir menu</span>
@@ -126,7 +140,7 @@
       </div>
     </div>
 
-    <!-- Mobile menu -->
+    <!-- Menu mobile (abre via JS) -->
     <nav id="mobile" class="container max-w-max hidden py-3 md:hidden">
       <div class="flex flex-col gap-2 rounded-2xl border border-white/10 bg-surface p-3">
         <a href="#beneficios"
@@ -141,7 +155,7 @@
     </nav>
   </header>
 
-  <!-- Seções carregadas via includes -->
+  <!-- CONTEÚDO PRINCIPAL (carregado via includes) -->
   <div data-include="components/hero.html" data-aos="fade-up"></div>
   <div data-include="components/beneficios.html" data-aos="fade-up"></div>
   <div data-include="components/conteudo.html" data-aos="fade-up"></div>
@@ -149,7 +163,7 @@
   <div data-include="components/preco.html" data-aos="fade-up"></div>
   <div data-include="components/faq.html" data-aos="fade-up"></div>
 
-  <!-- CTA Sticky -->
+  <!-- CTA Sticky (sempre visível ao rolar) -->
   <div class="sticky bottom-3 z-50">
     <div class="container max-w-max">
       <div
@@ -163,13 +177,13 @@
     </div>
   </div>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <div data-include="components/footer.html" data-aos="fade-up"></div>
 
   <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="js/include.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/include.js"></script> <!-- Faz o carregamento dos includes -->
+  <script src="js/main.js"></script> <!-- Funções principais (burger, progresso, etc.) -->
 </body>
 
 </html>
