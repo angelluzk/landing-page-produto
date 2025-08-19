@@ -1,36 +1,43 @@
-<section class="relative">
+<section class="relative bg-bg">
   <div class="container max-w-max grid grid-cols-1 gap-8 py-14 md:grid-cols-2 md:items-center">
-    <div>
+    <!-- Texto -->
+    <div data-aos="fade-right">
       <p class="text-xs font-bold uppercase tracking-[0.14em] text-brand2">Curso Online / E-book</p>
-      <h1 class="mt-2 text-4xl font-extrabold leading-tight md:text-5xl">
+      <h1 class="mt-4 text-4xl font-extrabold leading-tight md:text-5xl">
         Aprenda <em class="not-italic">do zero</em> e acelere sua carreira com o
         <span class="text-gradient">Produto Digital</span>
       </h1>
-      <p class="mt-3 max-w-[60ch] text-lg text-muted">Landing ultra enxuta, rápida e responsiva para vender seu produto
-        digital com clareza e conversão — feita com padrões do mercado atual.</p>
-      <div class="mt-5 flex flex-wrap gap-3">
+      <p class="mt-5 max-w-[60ch] text-lg text-muted">
+        Landing ultra enxuta, rápida e responsiva para vender seu produto digital com clareza e conversão — feita com padrões do mercado atual.
+      </p>
+
+      <!-- Botões -->
+      <div class="mt-6 flex flex-wrap gap-3">
         <a href="#preco"
-          class="group inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-brand to-brand2 px-5 py-3 font-bold text-black shadow-soft transition-transform duration-200 will-change-transform hover:-translate-y-0.5">
+          class="group inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-brand to-brand2 px-5 py-3 font-bold text-black shadow-soft transition-transform duration-200 will-change-transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-brand/30">
           Quero me inscrever
-          <svg class="h-4 w-4 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2">
-            <path d="M5 12h14" />
-            <path d="m12 5 7 7-7 7" />
+          <svg class="h-4 w-4 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14"/>
+            <path d="m12 5 7 7-7 7"/>
           </svg>
         </a>
         <a href="#conteudo"
-          class="inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-3 font-semibold text-white/90 hover:text-white">Ver
-          conteúdo</a>
+          class="inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-3 font-semibold text-white/90 transition-colors hover:border-white/30 hover:text-white">
+          Ver conteúdo
+        </a>
       </div>
-      <div class="mt-4 flex flex-wrap gap-2 text-sm">
-        <span class="rounded-full border border-white/15 px-3 py-1 text-muted">Acesso vitalício</span>
-        <span class="rounded-full border border-white/15 px-3 py-1 text-muted">7 dias de garantia</span>
-        <span class="rounded-full border border-white/15 px-3 py-1 text-muted">Atualizações incluídas</span>
+
+      <!-- Badges -->
+      <div class="mt-6 flex flex-wrap gap-2 text-sm" data-aos="fade-up" data-aos-delay="200">
+        <span class="rounded-full border border-white/15 px-3 py-1 text-muted hover:border-brand/40 hover:text-white transition-colors">Acesso vitalício</span>
+        <span class="rounded-full border border-white/15 px-3 py-1 text-muted hover:border-brand/40 hover:text-white transition-colors">7 dias de garantia</span>
+        <span class="rounded-full border border-white/15 px-3 py-1 text-muted hover:border-brand/40 hover:text-white transition-colors">Atualizações incluídas</span>
       </div>
     </div>
-    <div class="rounded-2xl border border-white/10 bg-surface p-3 shadow-soft">
-      <img alt="Mockup do produto" class="rounded-xl"
-        src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='900' height='560'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stop-color='%236d5efc'/><stop offset='100%' stop-color='%2300e5a8'/></linearGradient></defs><rect width='100%' height='100%' fill='%2311182a'/><circle cx='220' cy='260' r='160' fill='url(%23g)' fill-opacity='.32'/><rect x='380' y='130' width='380' height='290' rx='18' fill='url(%23g)' fill-opacity='.18'/><text x='400' y='280' fill='white' font-size='36' font-family='Inter,Arial' opacity='.9'>Seu Produto Aqui</text></svg>">
+
+    <!-- Mockup -->
+    <div class="rounded-2xl p-3 flex justify-center" data-aos="fade-left" data-aos-delay="150">
+      <img src="assets/images/mockup-produto.png" alt="Mockup do produto" class="rounded-xl shadow-lg max-w-full h-auto" loading="lazy">
     </div>
   </div>
 </section>

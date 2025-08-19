@@ -5,6 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Landing Page de Alta Conversão — Produto Digital</title>
+  <link rel="icon" href="assets/images/favicon.png" type="image/x-icon" />
   <meta name="description"
     content="Landing page moderna e responsiva feita com Tailwind. Perfeita para cursos, e-books e produtos digitais. Estrutura profissional com SEO, animações e foco em conversão." />
 
@@ -46,7 +47,9 @@
             brand2: '#00e5a8'
           },
           boxShadow: { soft: '0 10px 30px rgba(0,0,0,.25)' },
-          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'] },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol']
+          },
           borderRadius: { '2xl': '1.25rem' },
           maxWidth: { max: '1200px' }
         }
@@ -74,12 +77,10 @@
 </head>
 
 <body class="bg-bg text-text font-sans antialiased selection:bg-brand/30">
-  <!-- Link de pular para conteúdo (acessibilidade) -->
   <a href="#conteudo-pagina"
     class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:px-4 focus:py-2 focus:rounded-xl focus:bg-white/10 focus:text-white">Pular
     para conteúdo</a>
 
-  <!-- Barra de progresso scroll -->
   <div id="progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-brand to-brand2 z-50"></div>
 
   <!-- Fundo decorativo -->
@@ -93,42 +94,54 @@
   </div>
 
   <!-- Header -->
-  <header class="sticky top-0 z-50 border-b border-white/10 bg-bg/80 glass">
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-bg/80 glass shadow-md">
     <div class="container max-w-max flex h-16 items-center justify-between">
-      <a href="#" class="inline-flex items-center gap-2 font-extrabold tracking-tight">
-        <span class="h-3 w-3 rounded-full bg-gradient-to-br from-brand to-brand2"></span>
+
+      <!-- Logo -->
+      <a href="#" class="inline-flex items-center gap-2 font-extrabold tracking-tight" data-aos="fade-right">
+        <span class="h-3 w-3 rounded-full bg-gradient-to-br from-brand to-brand2 animate-pulse"></span>
         ProdutoDigital
       </a>
-      <nav id="menu" class="hidden items-center gap-6 text-muted md:flex">
-        <a href="#beneficios" class="hover:text-white">Benefícios</a>
-        <a href="#conteudo" class="hover:text-white">Conteúdo</a>
-        <a href="#depoimentos" class="hover:text-white">Depoimentos</a>
-        <a href="#preco" class="hover:text-white">Preço</a>
-        <a href="#faq" class="hover:text-white">FAQ</a>
+
+      <!-- Menu desktop -->
+      <nav id="menu" class="hidden items-center gap-6 text-muted md:flex" data-aos="fade-down">
+        <a href="#beneficios" class="hover:text-white transition-colors">Benefícios</a>
+        <a href="#conteudo" class="hover:text-white transition-colors">Conteúdo</a>
+        <a href="#depoimentos" class="hover:text-white transition-colors">Depoimentos</a>
+        <a href="#preco" class="hover:text-white transition-colors">Preço</a>
+        <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
       </nav>
+
+      <!-- Ações -->
       <div class="flex items-center gap-3">
         <a href="#preco"
-          class="hidden rounded-full border border-white/15 px-4 py-2 text-sm font-semibold text-white/90 hover:text-white md:inline-block">Comprar</a>
+          class="hidden rounded-full border border-white/15 px-4 py-2 text-sm font-semibold text-white/90 hover:text-white md:inline-block transition-colors">
+          Comprar
+        </a>
         <button id="burger" aria-controls="menu" aria-expanded="false"
-          class="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 md:hidden">
+          class="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 md:hidden hover:bg-white/5 transition">
           <span class="sr-only">Abrir menu</span>
-          <span class="block h-0.5 w-5 bg-white"></span>
+          <span class="block h-0.5 w-5 bg-white transition-all duration-300"></span>
         </button>
       </div>
     </div>
+
     <!-- Mobile menu -->
     <nav id="mobile" class="container max-w-max hidden py-3 md:hidden">
       <div class="flex flex-col gap-2 rounded-2xl border border-white/10 bg-surface p-3">
-        <a href="#beneficios" class="rounded-xl px-3 py-2 text-muted hover:bg-white/5 hover:text-white">Benefícios</a>
-        <a href="#conteudo" class="rounded-xl px-3 py-2 text-muted hover:bg-white/5 hover:text-white">Conteúdo</a>
-        <a href="#depoimentos" class="rounded-xl px-3 py-2 text-muted hover:bg-white/5 hover:text-white">Depoimentos</a>
-        <a href="#preco" class="rounded-xl px-3 py-2 text-muted hover:bg-white/5 hover:text-white">Preço</a>
-        <a href="#faq" class="rounded-xl px-3 py-2 text-muted hover:bg-white/5 hover:text-white">FAQ</a>
+        <a href="#beneficios"
+          class="rounded-xl px-3 py-2 text-muted hover:bg-white/5 hover:text-white transition">Benefícios</a>
+        <a href="#conteudo"
+          class="rounded-xl px-3 py-2 text-muted hover:bg-white/5 hover:text-white transition">Conteúdo</a>
+        <a href="#depoimentos"
+          class="rounded-xl px-3 py-2 text-muted hover:bg-white/5 hover:text-white transition">Depoimentos</a>
+        <a href="#preco" class="rounded-xl px-3 py-2 text-muted hover:bg-white/5 hover:text-white transition">Preço</a>
+        <a href="#faq" class="rounded-xl px-3 py-2 text-muted hover:bg-white/5 hover:text-white transition">FAQ</a>
       </div>
     </nav>
   </header>
 
-  <!-- Seções carregadas via includes -->
+<!-- Seções carregadas via includes -->
   <div data-include="components/hero.html" data-aos="fade-up"></div>
   <div data-include="components/beneficios.html" data-aos="fade-up"></div>
   <div data-include="components/conteudo.html" data-aos="fade-up"></div>
@@ -150,30 +163,13 @@
     </div>
   </div>
 
-  <!-- Footer -->
+<!-- Footer -->
   <div data-include="components/footer.html" data-aos="fade-up"></div>
 
   <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="js/include.js"></script>
   <script src="js/main.js"></script>
-
-  <!-- Inicialização do AOS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 800,
-      once: true,
-      easing: 'ease-out-cubic'
-    });
-
-    // Barra de progresso scroll
-    window.addEventListener('scroll', () => {
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrollTop = document.documentElement.scrollTop;
-      const progress = (scrollTop / docHeight) * 100;
-      document.getElementById('progress').style.width = progress + "%";
-    });
-  </script>
 </body>
 
 </html>

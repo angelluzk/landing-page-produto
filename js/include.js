@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   Promise.all(promises).then(() => {
-    // sinaliza que os includes foram inseridos no DOM
+    // sinaliza que todos os includes foram carregados
     document.dispatchEvent(new CustomEvent('includesLoaded'));
   });
 });
