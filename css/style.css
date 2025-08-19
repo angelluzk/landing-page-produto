@@ -1,0 +1,21 @@
+/* Pequenas utilidades que não valem uma classe utilitária */
+.text-gradient {
+  background: linear-gradient(135deg, #6d5efc, #00e5a8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Efeito glass utilizado no header e CTA Sticky */
+.glass {
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+/* Preferências de redução de movimento */
+@media (prefers-reduced-motion: reduce){
+  .animate-none {
+    animation: none !important;
+    transition: none !important;
+  }
+}
