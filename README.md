@@ -1,6 +1,7 @@
 # 🚀 Landing Page de Alta Conversão — Produto Digital
 
 ![Capa do Projeto](assets/images/capa.png)
+> ⚠️ **Observação:** Esta imagem é apenas um exemplo.
 
 ## 📖 Sobre o Projeto
 
@@ -24,7 +25,7 @@ O projeto foi desenvolvido com foco em:
 ## 📂 Estrutura do Projeto
 
 ```
-landing-page/
+landing-page-produto/
 ├─ index.html            # Página principal
 ├─ css/
 │  └─ style.css          # Estilos customizados
@@ -91,6 +92,6 @@ Esta landing page serve como **exemplo profissional de produto digital**, pronta
 
 ## 📞 Contato
 
-* **LinkedIn:** [Seu LinkedIn](https://www.linkedin.com/in/angelitaluz/)
-* **E-mail:** [seuemail@exemplo.com](mailto:contatoangelluz@gmail.com)
-* **GitHub:** [Seu GitHub](https://github.com/angelluzk)
+* **LinkedIn:** [linkedin.com/in/angelitaluz](https://www.linkedin.com/in/angelitaluz/)
+* **E-mail:** [contatoangelluz@gmail.com](mailto:contatoangelluz@gmail.com)
+* **GitHub:** [github.com/angelluzk](https://github.com/angelluzk)
