@@ -3,6 +3,9 @@
 ![Capa do Projeto](assets/images/capa.png)
 > ⚠️ **Observação:** Esta imagem é apenas um exemplo.
 
+🔗 **Visualize o projeto online:**  
+👉 [Landing Page - Clique para Visualizar](https://angelluzk.github.io/landing-page-produto/) 
+
 ## 📖 Sobre o Projeto
 
 Esta landing page é um **exemplo funcional e personalizável** para vender produtos digitais como cursos, e-books ou mentorias online. Ela foi desenvolvida para demonstrar **minhas habilidades como desenvolvedor** e mostrar como construir uma página de alta conversão seguindo padrões modernos de design e usabilidade.
