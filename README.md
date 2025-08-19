@@ -1,7 +1,7 @@
 # 🚀 Landing Page de Alta Conversão — Produto Digital
 
 ![Capa do Projeto](assets/images/capa.png)
-> ⚠️ **Observação:** Esta imagem é apenas um exemplo.
+> ⚠️ **Observação:** Imagem para visualizar um pouco do projeto. Se quiser ver em funcionamento, acesse o link abaixo!!
 
 🔗 **Visualize o projeto online:**  
 👉 [Landing Page - Clique para Visualizar](https://angelluzk.github.io/landing-page-produto/) 
