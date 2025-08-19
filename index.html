@@ -4,29 +4,30 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Produto Digital — Landing de Alta Conversão</title>
+  <title>Landing Page de Alta Conversão — Produto Digital</title>
   <meta name="description"
-    content="Landing page moderna e responsiva para curso online ou e-book. Estrutura profissional com Tailwind, SEO, acessibilidade e performance." />
+    content="Landing page moderna e responsiva feita com Tailwind. Perfeita para cursos, e-books e produtos digitais. Estrutura profissional com SEO, animações e foco em conversão." />
+
   <!-- Cor da barra de endereço / UI -->
   <meta name="color-scheme" content="dark light" />
-  <!-- iOS Safari -->
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <!-- Windows / Microsoft -->
   <meta name="msapplication-navbutton-color" content="#0b0f1a" />
   <meta name="msapplication-TileColor" content="#0b0f1a" />
 
   <!-- Open Graph / Twitter -->
-  <meta property="og:title" content="Produto Digital — Landing de Alta Conversão" />
+  <meta property="og:title" content="Landing Page de Alta Conversão — Produto Digital" />
   <meta property="og:description"
     content="Estrutura profissional para vender seu curso ou e-book com foco em conversão." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Fonte -->
+  <!-- Fonte otimizada -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+    as="style">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Tailwind Play CDN -->
@@ -53,8 +54,11 @@
     }
   </script>
 
-  <!-- CSS personalizado (moved from inline) -->
+  <!-- CSS personalizado -->
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Biblioteca de animações AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <!-- Schema.org -->
   <script type="application/ld+json">
@@ -74,6 +78,9 @@
   <a href="#conteudo-pagina"
     class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:px-4 focus:py-2 focus:rounded-xl focus:bg-white/10 focus:text-white">Pular
     para conteúdo</a>
+
+  <!-- Barra de progresso scroll -->
+  <div id="progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-brand to-brand2 z-50"></div>
 
   <!-- Fundo decorativo -->
   <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10">
@@ -121,13 +128,13 @@
     </nav>
   </header>
 
-  <!-- Componentes injetados via JavaScript -->
-  <div data-include="components/hero.html"></div>
-  <div data-include="components/beneficios.html"></div>
-  <div data-include="components/conteudo.html"></div>
-  <div data-include="components/depoimentos.html"></div>
-  <div data-include="components/preco.html"></div>
-  <div data-include="components/faq.html"></div>
+  <!-- Seções carregadas via includes -->
+  <div data-include="components/hero.html" data-aos="fade-up"></div>
+  <div data-include="components/beneficios.html" data-aos="fade-up"></div>
+  <div data-include="components/conteudo.html" data-aos="fade-up"></div>
+  <div data-include="components/depoimentos.html" data-aos="fade-up"></div>
+  <div data-include="components/preco.html" data-aos="fade-up"></div>
+  <div data-include="components/faq.html" data-aos="fade-up"></div>
 
   <!-- CTA Sticky -->
   <div class="sticky bottom-3 z-50">
@@ -144,11 +151,29 @@
   </div>
 
   <!-- Footer -->
-  <div data-include="components/footer.html"></div>
+  <div data-include="components/footer.html" data-aos="fade-up"></div>
 
-  <!-- Include loader + main script -->
+  <!-- Scripts -->
   <script src="js/include.js"></script>
   <script src="js/main.js"></script>
+
+  <!-- Inicialização do AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: 'ease-out-cubic'
+    });
+
+    // Barra de progresso scroll
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollTop = document.documentElement.scrollTop;
+      const progress = (scrollTop / docHeight) * 100;
+      document.getElementById('progress').style.width = progress + "%";
+    });
+  </script>
 </body>
 
 </html>

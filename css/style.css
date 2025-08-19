@@ -1,4 +1,8 @@
-/* Pequenas utilidades que não valem uma classe utilitária */
+/* ==========================
+   UTILIDADES
+========================== */
+
+/* Texto em gradiente */
 .text-gradient {
   background: linear-gradient(135deg, #6d5efc, #00e5a8);
   -webkit-background-clip: text;
@@ -10,12 +14,68 @@
 .glass {
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
+  background: rgba(17, 24, 42, 0.6); /* fallback elegante */
 }
 
-/* Preferências de redução de movimento */
-@media (prefers-reduced-motion: reduce){
-  .animate-none {
+/* ==========================
+   ESPAÇAMENTOS GLOBAIS
+========================== */
+
+section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+@media (min-width: 768px) {
+  section {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+}
+
+/* ==========================
+   ANIMAÇÕES PERSONALIZADAS
+========================== */
+
+/* Fade suave */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Hover suave para links e botões */
+a, button {
+  transition: all 0.3s ease;
+}
+
+/* ==========================
+   ACESSIBILIDADE E DETALHES
+========================== */
+
+/* Melhor highlight no texto selecionado */
+::selection {
+  background: rgba(109, 94, 252, 0.3);
+  color: #fff;
+}
+
+/* Foco visível para acessibilidade */
+:focus {
+  outline: 2px solid #6d5efc;
+  outline-offset: 2px;
+}
+
+/* ==========================
+   REDUÇÃO DE MOVIMENTO
+========================== */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
     animation: none !important;
     transition: none !important;
+    scroll-behavior: auto !important;
   }
 }
