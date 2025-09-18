@@ -93,8 +93,15 @@ Esta landing page serve como **exemplo profissional de produto digital**, pronta
 
 ---
 
-## 📞 Contato
+### ✍️ Autor
 
-* **LinkedIn:** [linkedin.com/in/angelitaluz](https://www.linkedin.com/in/angelitaluz/)
-* **E-mail:** [contatoangelluz@gmail.com](mailto:contatoangelluz@gmail.com)
-* **GitHub:** [github.com/angelluzk](https://github.com/angelluzk)
+<img src="https://github.com/angelluzk.png" width="100px;" alt="Foto de Angel Luz"/>
+
+> Desenvolvido com 💛 por **Angel Luz**.
+
+Se quiser conversar, colaborar ou oferecer uma oportunidade:
+
+📬 E-mail: [contatoangelluz@gmail.com](mailto:contatoangelluz@gmail.com)  
+🐙 GitHub: [@angelluzk](https://github.com/angelluzk)  
+💼 LinkedIn: [linkedin.com/in/angelitaluz](https://www.linkedin.com/in/angelitaluz/)  
+🗂️Website / Portfólio: [meu_portfolio/](https://angelluzk.github.io/meu_portfolio/) 
